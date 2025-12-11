@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>متجر نسيم الرياض</title>
+<style>
+body { background:black; color:white; font-family:Tahoma; text-align:center; padding:20px; }
+.container { width:90%; margin:auto; }
+.product { border:2px solid gold; padding:15px; margin:20px 0; border-radius:12px; }
+.product h2 { color:gold; }
+.input { margin:10px 0; }
+.gallery { display:flex; flex-wrap:wrap; justify-content:center; }
+.gallery img { width:120px; height:120px; object-fit:cover; border:1px solid gold; border-radius:8px; margin:5px; }
+.desc-box { width:90%; padding:10px; background:#111; border:1px solid gold; color:white; border-radius:10px; margin:auto; }
+.remove-btn {
+    background:red;
+    color:white;
+    border:none;
+    border-radius:6px;
+    padding:5px 10px;
+    margin:5px;
+    cursor:pointer;
+}
+.whatsapp { display:block; margin-top:10px; padding:10px; border:1px solid gold; color:gold; text-decoration:none; border-radius:10px; }
+.phone-box {
+    border:2px solid gold;
+    padding:12px;
+    border-radius:12px;
+    margin-bottom:25px;
+    display:inline-block;
+    background:#111;
+}
+.phone-box div {
+    font-size:20px;
+    margin:5px 0;
+}
+.address-box {
+    margin-top: 15px;
+    font-size: 20px;
+    color: #ffd700;
+    background:#111;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid gold;
+}
+</style>
+
+<script>
+function previewMulti(input, id){
+    let box = document.getElementById(id);
+    box.innerHTML = "";
+    for(let i=0; i<input.files.length; i++){
+        let wrapper = document.createElement("div");
+        wrapper.style.position = "relative";
+
+        let img = document.createElement("img");
+        img.src = URL.createObjectURL(input.files[i]);
+
+        let btn = document.createElement("button");
+        btn.innerText = "حذف";
+        btn.className = "remove-btn";
+        btn.onclick = function(){ wrapper.remove(); };
+
+        wrapper.appendChild(img);
+        wrapper.appendChild(btn);
+        box.appendChild(wrapper);
+    }
+}
+</script>
+</head>
+
+<body>
+
+<h1 style="color:gold; font-size:32px;">معرض ومحلات نسيم الرياض</h1>
+
+<div class="address-box">
+📍 الموقع: سئيون – سوق النساء – خلف باحشوان للأعشاب – بجانب محل أحذية البريهي
+</div>
+
+<div class="phone-box">
+    <strong>📱 للتواصل عبر الأرقام التالية:</strong>
+    <div>📞 772454663</div>
+    <div>📞 778319479</div>
+    <div>📞 780860843</div>
+</div>
+
+<div class="container">
+
+<div class="product">
+<h2>أقمشة عرايسي زريكون سعودي</h2>
+
+<div id="gallery1" class="gallery"></div>
+
+<input class="input" type="file" accept="image/*" multiple onchange="previewMulti(this,'gallery1')"><br>
+
+<textarea class="desc-box" placeholder="اكتب الوصف هنا..."></textarea><br>
+
+<input class="input" type="number" placeholder="السعر"><br>
+
+<a class="whatsapp" href="https://wa.me/967772454663">تواصل واتساب</a>
+</div>
+
+<div class="product">
+<h2>أقمشة عرايسي كوري</h2>
+
+<div id="gallery2" class="gallery"></div>
+
+<input class="input" type="file" accept="image/*" multiple onchange="previewMulti(this,'gallery2')"><br>
+
+<textarea class="desc-box" placeholder="اكتب الوصف هنا..."></textarea><br>
+
+<input class="input" type="number" placeholder="السعر"><br>
+
+<a class="whatsapp" href="https://wa.me/967772454663">تواصل واتساب</a>
+</div>
+
+<div class="product">
+<h2>أقمشة عرايسي أبو ورود</h2>
+
+<div id="gallery3" class="gallery"></div>
+
+<input class="input" type="file" accept="image/*" multiple onchange="previewMulti(this,'gallery3')"><br>
+
+<textarea class="desc-box" placeholder="اكتب الوصف هنا..."></textarea><br>
+
+<input class="input" type="number" placeholder="السعر"><br>
+
+<a class="whatsapp" href="https://wa.me/967772454663">تواصل واتساب</a>
+</div>
+
+<div class="product">
+<h2>دروع فخمة وبل</h2>
+
+<div id="gallery4" class="gallery"></div>
+
+<input class="input" type="file" accept="image/*" multiple onchange="previewMulti(this,'gallery4')"><br>
+
+<textarea class="desc-box" placeholder="اكتب الوصف هنا..."></textarea><br>
+
+<input class="input" type="number" placeholder="السعر"><br>
+
+<a class="whatsapp" href="https://wa.me/967772454663">تواصل واتساب</a>
+</div>
+
+<div class="product">
+<h2>فساتين عرايسي جديد</h2>
+
+<div id="gallery5" class="gallery"></div>
+
+<input class="input" type="file" accept="image/*" multiple onchange="previewMulti(this,'gallery5')"><br>
+
+<textarea class="desc-box" placeholder="اكتب الوصف هنا..."></textarea><br>
+
+<input class="input" type="number" placeholder="السعر"><br>
+
+<a class="whatsapp" href="https://wa.me/967772454663">تواصل واتساب</a>
+</div>
+
+<div class="product">
+<h2>فساتين تركيات موديل جديد</h2>
+
+<div id="gallery6" class="gallery"></div>
+
+<input class="input" type="file" accept="image/*" multiple onchange="previewMulti(this,'gallery6')"><br>
+
+<textarea class="desc-box" placeholder="اكتب الوصف هنا..."></textarea><br>
+
+<input class="input" type="number" placeholder="السعر"><br>
+
+<a class="whatsapp" href="https://wa.me/967772454663">تواصل واتساب</a>
+</div>
+
+<div class="product">
+<h2>بطاين أقمشة بجميع ألوانه</h2>
+
+<div id="gallery7" class="gallery"></div>
+
+<input class="input" type="file" accept="image/*" multiple onchange="previewMulti(this,'gallery7')"><br>
+
+<textarea class="desc-box" placeholder="اكتب الوصف هنا..."></textarea><br>
+
+<input class="input" type="number" placeholder="السعر"><br>
+
+<a class="whatsapp" href="https://wa.me/967772454663">تواصل واتساب</a>
+</div>
+
+</div>
+</body>
+</html>
