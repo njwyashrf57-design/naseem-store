@@ -1,0 +1,20 @@
+[
+  {
+    "name": "عطر نسيم الخاص",
+    "price": "35 ريال",
+    "image": "https://via.placeholder.com/150",
+    "description": "عطر ثابت وفواح رائحة فاخرة."
+  },
+  {
+    "name": "بخور فاخر",
+    "price": "20 ريال",
+    "image": "https://via.placeholder.com/150",
+    "description": "بخور ممتاز يدوم طويلاً."
+  },
+  {
+    "name": "معطر غرف",
+    "price": "15 ريال",
+    "image": "https://via.placeholder.com/150",
+    "description": "معطر برائحة رائعة يدوم ساعات."
+  }
+]
