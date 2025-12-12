@@ -71,7 +71,33 @@ function previewMulti(input, id){
 </head>
 
 <body>
+<div id="products" style="display: flex; flex-wrap: wrap; gap: 20px; padding: 20px;"></div>
 
+<script>
+  fetch("https://njwyashrf57-design.github.io/naseem-store/products.json")
+    .then(res => res.json())
+    .then(data => {
+      let container = document.getElementById("products");
+
+      data.forEach(product => {
+        container.innerHTML += `
+          <div style="
+            width: 45%;
+            border: 2px solid gold;
+            padding: 10px;
+            background: #111;
+            color: white;
+            border-radius: 10px;
+          ">
+            <img src="${product.image}" style="width: 100%; border-radius: 10px;">
+            <h3 style="color: gold;">${product.name}</h3>
+            <p>${product.description}</p>
+            <p style="color: lightgreen; font-weight: bold;">${product.price}</p>
+          </div>
+        `;
+      });
+    });
+</script>
 <h1 style="color:gold; font-size:32px;">معرض ومحلات نسيم الرياض</h1>
 
 <div class="address-box">
